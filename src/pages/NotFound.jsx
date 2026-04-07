@@ -214,7 +214,7 @@ export default function NotFound() {
                 e.currentTarget.style.color = "#e8e8f0";
               }}
             >
-              ← Go Homepage
+              ← Go Back
             </button>
           </div>
         </div>

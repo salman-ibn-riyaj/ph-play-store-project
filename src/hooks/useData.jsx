@@ -14,7 +14,7 @@ const useData = () => {
             setTimeout(()=>{
                 setApps(data);
                 setLoading(false);
-            },2000)
+            },500)
 
             
         }

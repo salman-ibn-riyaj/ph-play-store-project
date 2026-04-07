@@ -5,6 +5,7 @@ import InstalledApps from "../../pages/InstalledApps/InstalledApps";
 import RootLayout from "../../RootLayout/RootLayout";
 import NotFound from "../../pages/NotFound";
 import AppDetails from "../AppCard/AppDetails";
+import Dashboard from "../Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/installedApps",
         Component: InstalledApps,
+      },
+      {
+        path:'/dashboard',
+        Component: Dashboard
       },
       { path: "*", Component: NotFound },
     ],
