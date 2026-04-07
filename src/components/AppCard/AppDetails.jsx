@@ -27,7 +27,7 @@ const AppDetails = () => {
     
     
     return (
-        <div className='flex items-center gap-6 bg-amber-50 container mx-auto mt-5 rounded-xl'>
+        <div className='flex flex-col md:flex items-center gap-6 bg-amber-50 container mx-auto mt-5 rounded-xl p-4'>
             <img src={expectedApp.image} alt="" />
 
             <div className='space-y-2'>
