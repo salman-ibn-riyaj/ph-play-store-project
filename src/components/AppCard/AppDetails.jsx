@@ -41,7 +41,7 @@ const AppDetails = () => {
     
     return (
         <div className='flex flex-col md:flex items-center gap-6 bg-amber-50 container mx-auto mt-5 rounded-xl p-4'>
-            <img src={expectedApp.image} alt="" />
+            <img className='h-30 w-auto' src={expectedApp.image} alt="" />
 
             <div className='space-y-2'>
                 <h2 className='font-bold text-3xl'>{expectedApp.title}</h2>
@@ -51,6 +51,8 @@ const AppDetails = () => {
                 <h3 className='font-bold'>Developed by: {expectedApp.companyName}</h3>
 
                 <button onClick={()=> handleInstalledApps(expectedApp)} className='btn btn-primary'>Install Now</button>
+
+            
             </div>
 
             
