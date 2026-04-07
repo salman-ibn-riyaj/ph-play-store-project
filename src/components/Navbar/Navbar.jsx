@@ -16,7 +16,7 @@ const Navbar = () => {
         },
         {
             path:'/installedApps',
-            text: "Installation"
+            text: "Installed Apps"
         }
     ]
   return (

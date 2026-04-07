@@ -7,11 +7,12 @@ import Homepage from "./pages/Homepage/Homepage";
 import Apps from "./pages/apps/Apps";
 import InstalledApps from "./pages/InstalledApps/InstalledApps";
 import { router } from "./components/Router/Router";
-
-
+import ContextApiProvider from "./Context/ContextApiProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <ContextApiProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </ContextApiProvider>
   </StrictMode>,
 );

@@ -2,8 +2,14 @@
 import { useParams } from 'react-router';
 import useData from '../../hooks/useData';
 import { RingLoader } from 'react-spinners';
+import { useContext } from 'react';
+import { ContextApi } from '../../Context/ContextApi/ContextApi';
+import { toast } from 'react-toastify';
 
 const AppDetails = () => {
+
+    const {installedApps, setInstalledApps} = useContext(ContextApi);
+    console.log(installedApps, setInstalledApps);
 
     const {apps, loading} = useData();
     console.log(apps, loading);
@@ -24,6 +30,13 @@ const AppDetails = () => {
         </div>
     }
 
+    const handleInstalledApps =() =>{
+        const updatedInstalledApps = ([...installedApps, expectedApp]);
+
+        setInstalledApps(updatedInstalledApps);
+        toast.success(`${expectedApp.title} is installed`)
+    }
+
     
     
     return (
@@ -37,7 +50,7 @@ const AppDetails = () => {
 
                 <h3 className='font-bold'>Developed by: {expectedApp.companyName}</h3>
 
-                <button className='btn btn-primary'>Install Now</button>
+                <button onClick={()=> handleInstalledApps(expectedApp)} className='btn btn-primary'>Install Now</button>
             </div>
 
             
