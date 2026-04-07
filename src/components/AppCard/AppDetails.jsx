@@ -11,16 +11,18 @@ const AppDetails = () => {
     const params = useParams();
     console.log(params);
 
-    if(loading){
-        <div className="flex justify-center items-center">
-            <RingLoader  color='purple'/>
-        </div>
-    }
+    
 
 
 
     const expectedApp = apps.find(item => item.id == params.id);
     console.log(expectedApp);
+
+    if(loading){
+       return <div className="flex justify-center items-center">
+            <RingLoader  color='purple'/>
+        </div>
+    }
 
     
     
